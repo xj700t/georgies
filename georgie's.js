@@ -4294,8 +4294,8 @@ p.nominalBounds = new cjs.Rectangle(-1260.5,-282.7,2765.5,660.7);
 		
 		//PRE GAME FUNCTIONS
 		function initializeSounds() {
-			createjs.Sound.registerSound("", "creak", 1);
-			createjs.Sound.registerSound("", "fastclaps", 2);
+			createjs.Sound.registerSound("https://xj700t.github.io/georgies/sounds/creak3.wav", "creak", 1);
+			createjs.Sound.registerSound("https://xj700t.github.io/georgies/sounds/Hand_Claps_Close.mp3", "fastclaps", 2);
 		}
 		
 		function freshStart() {
