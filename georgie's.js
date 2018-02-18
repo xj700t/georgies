@@ -4987,14 +4987,14 @@ p.nominalBounds = new cjs.Rectangle(-1260.5,-282.7,2765.5,660.7);
 							bigPicture.x += 67
 						}
 		
-					} else if (bounds.width > bounds.height) {
+					} else if (bounds.width >= bounds.height) {
 						/*picture is wide*/
 						bigPicture.x = -230
 						bigPicture.y = 20
-						bigPicture.scaleX = bigPicture.scaleX / (bounds.width / 450)
+						bigPicture.scaleX = bigPicture.scaleX / (bounds.width / 360)
 						bigPicture.scaleY = bigPicture.scaleX
 						var H = bigPicture.scaleY * bounds.height
-		
+						/*
 						if (H <= 450 && H > 400) {
 							bigPicture.y += 5
 						}
@@ -5021,7 +5021,7 @@ p.nominalBounds = new cjs.Rectangle(-1260.5,-282.7,2765.5,660.7);
 						}
 						if (H <= 50) {
 							bigPicture.y += 65
-						}
+						}*/
 					}
 					zoomWindow.addChild(bigPicture)
 		
