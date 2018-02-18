@@ -4962,7 +4962,7 @@ p.nominalBounds = new cjs.Rectangle(-1260.5,-282.7,2765.5,660.7);
 					bigPicture.visible = true
 					var bounds = bigPicture.nominalBounds
 		
-					if (bounds.height > bounds.width) {
+					if (bounds.height >= bounds.width) {
 						/*picture is tall*/
 						bigPicture.x = -160
 						bigPicture.y = -6
@@ -4987,7 +4987,7 @@ p.nominalBounds = new cjs.Rectangle(-1260.5,-282.7,2765.5,660.7);
 							bigPicture.x += 67
 						}
 		
-					} else if (bounds.width >= bounds.height) {
+					} else if (bounds.width > bounds.height) {
 						/*picture is wide*/
 						bigPicture.x = -230
 						bigPicture.y = 20
