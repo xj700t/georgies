@@ -4961,8 +4961,19 @@ p.nominalBounds = new cjs.Rectangle(-1260.5,-282.7,2765.5,660.7);
 		
 					bigPicture.visible = true
 					var bounds = bigPicture.nominalBounds
-		
-					if (bounds.height >= bounds.width) {
+		if (Math.abs(bounds.height - bounds.width) < 40) {
+				/*picture is square by a margin of 40px*/
+				bigPicture.x = -200
+				bigPicture.y = -6
+				if (bounds.height > bounds.width) {
+
+					bigPicture.scaleY = bigPicture.scaleY / (bounds.height / 350)
+					bigPicture.scaleX = bigPicture.scaleY
+				} else {
+					bigPicture.scaleX = bigPicture.scaleX / (bounds.width / 350)
+					bigPicture.scaleY = bigPicture.scaleX
+				}
+				} else if (bounds.height > bounds.width) {
 						/*picture is tall*/
 						bigPicture.x = -160
 						bigPicture.y = -6
@@ -4987,7 +4998,7 @@ p.nominalBounds = new cjs.Rectangle(-1260.5,-282.7,2765.5,660.7);
 							bigPicture.x += 67
 						}
 		
-					} else if (bounds.width >= bounds.height) {
+					} else if (bounds.width > bounds.height) {
 						/*picture is wide*/
 						bigPicture.x = -230
 						bigPicture.y = 20
